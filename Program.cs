@@ -10,12 +10,18 @@ namespace Interface_ShapeSolid
                 = {
                         new Box(2, 3, 5),
                         new RightTriangularPrism(2,3,5),
-                        new Sphere(3)
+                        new Sphere(3),
+                        new Column<RectAngle>(new RectAngle(2,4),5),
             };
+            Box box01 = new Box(2, 3, 5);
+            Column<RectAngle> box02 = new Column<RectAngle>(new RectAngle(2, 5), 3);
+            Column<Triangle> trianglePrism = new Column<Triangle>(new Triangle(3, 2, 1), 4);
+            Column<Hexagon> HexagonalPrism = new Column<Hexagon>(new Hexagon(6), 4);
             foreach (ISolid solid in solids)
             {
                 Console.WriteLine($"体積={solid.Volume},表面積={solid.Surface}");
             }
+
             RectAngle[] rectAngles = new RectAngle[] { new RectAngle(3, 7), new RectAngle(4, 7),new RectAngle(7,3)};
             Console.WriteLine(rectAngles[0] == rectAngles[1]);
             Console.WriteLine(rectAngles[0] == rectAngles[2]);

@@ -25,7 +25,7 @@ namespace ShapeSolid
         }
         public float Surface
         {
-            get { return GetSurface( width,height); }
+            get { return GetSurface(width, height); }
         }
         public float Circumference
         {
@@ -34,7 +34,7 @@ namespace ShapeSolid
                 return (width + height) * 2.0f;
             }
         }
-         static public float GetSurface(float width,float height)
+        static public float GetSurface(float width, float height)
         {
             return width * height;
         }
